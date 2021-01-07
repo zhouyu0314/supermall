@@ -1,6 +1,6 @@
 <template>
-  <swiper ref="swiper" v-if="banner.length">
-    <swiper-item v-for="(item, index) in banner" :key="index">
+  <swiper ref="swiper" v-if="banners.length">
+    <swiper-item v-for="(item, index) in banners" :key="index">
       <a :href="item.link">
         <img :src="item.image" alt="" @load="imageLoaded">
       </a>
@@ -14,7 +14,7 @@
     export default {
         name: "HomeSwiper",
         props: {
-            banner: {
+            banners: {
                 type: Array,
                 required: true,
                 default: () => [],
