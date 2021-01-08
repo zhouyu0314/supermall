@@ -7,68 +7,7 @@
     <home-recommend-view :recommends="recommends"/>
     <feature-view/>
     <tab-control :titles="['流行','新款','精选']" class="tab-control"/>
-    <ul>
-      <li>列表1</li>
-      <li>列表2</li>
-      <li>列表3</li>
-      <li>列表4</li>
-      <li>列表5</li>
-      <li>列表6</li>
-      <li>列表7</li>
-      <li>列表8</li>
-      <li>列表9</li>
-      <li>列表10</li>
-      <li>列表11</li>
-      <li>列表12</li>
-      <li>列表13</li>
-      <li>列表14</li>
-      <li>列表15</li>
-      <li>列表16</li>
-      <li>列表17</li>
-      <li>列表18</li>
-      <li>列表19</li>
-      <li>列表20</li>
-      <li>列表1</li>
-      <li>列表2</li>
-      <li>列表3</li>
-      <li>列表4</li>
-      <li>列表5</li>
-      <li>列表6</li>
-      <li>列表7</li>
-      <li>列表8</li>
-      <li>列表9</li>
-      <li>列表10</li>
-      <li>列表11</li>
-      <li>列表12</li>
-      <li>列表13</li>
-      <li>列表14</li>
-      <li>列表15</li>
-      <li>列表16</li>
-      <li>列表17</li>
-      <li>列表18</li>
-      <li>列表19</li>
-      <li>列表20</li>
-      <li>列表1</li>
-      <li>列表2</li>
-      <li>列表3</li>
-      <li>列表4</li>
-      <li>列表5</li>
-      <li>列表6</li>
-      <li>列表7</li>
-      <li>列表8</li>
-      <li>列表9</li>
-      <li>列表10</li>
-      <li>列表11</li>
-      <li>列表12</li>
-      <li>列表13</li>
-      <li>列表14</li>
-      <li>列表15</li>
-      <li>列表16</li>
-      <li>列表17</li>
-      <li>列表18</li>
-      <li>列表19</li>
-      <li>列表20</li>
-    </ul>
+<goods-list :goods="goods['pop'].list"/>
   </div>
 
 </template>
@@ -76,10 +15,12 @@
 <script>
     import NavBar from "components/common/navBar/NavBar";
     import TabControl from "components/content/tabControl/TabControl";
+    import GoodsList from "components/content/goods/GoodsList";
 
     import HomeSwiper from './components/HomeSwiper'
     import HomeRecommendView from "./components/HomeRecommendView";
     import FeatureView from "./components/FeatureView";
+
 
     import {getHomeMultiData, getHomeGoods} from "views/home/api/home";
 
@@ -88,6 +29,7 @@
         components: {
             NavBar,
             TabControl,
+            GoodsList,
             HomeSwiper,
             HomeRecommendView,
             FeatureView,
